@@ -46,8 +46,8 @@ import pandas as pd
 # copy of that pattern — dashboard code only ever IMPORTS from those
 # packages, never edits them.
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
-_SCORING_MODEL_DIR = _PROJECT_ROOT / "[C] scoring_model"
-_EDGE_RANKING_DIR = _PROJECT_ROOT / "[C] edge_ranking"
+_SCORING_MODEL_DIR = _PROJECT_ROOT / "scoring_model"
+_EDGE_RANKING_DIR = _PROJECT_ROOT / "edge_ranking"
 for _p in (_SCORING_MODEL_DIR, _EDGE_RANKING_DIR):
     if str(_p) not in sys.path:
         sys.path.insert(0, str(_p))
