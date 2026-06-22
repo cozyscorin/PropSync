@@ -23,7 +23,7 @@ from typing import Callable
 # folder to sys.path once, at import time, so every bare `import hits`
 # etc. below resolves correctly regardless of the caller's cwd.
 _SCORING_MODEL_DIR = (
-    Path(__file__).resolve().parent.parent / "[C] scoring_model"
+    Path(__file__).resolve().parent.parent / "scoring_model"
 )
 if str(_SCORING_MODEL_DIR) not in sys.path:
     sys.path.insert(0, str(_SCORING_MODEL_DIR))
