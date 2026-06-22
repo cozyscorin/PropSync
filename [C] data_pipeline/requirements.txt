@@ -1,0 +1,9 @@
+# Core data pull (Baseball Savant / FanGraphs wrapper) — no auth needed
+pybaseball>=2.2.7
+
+# Used by pybaseball under the hood, and directly by our CSV fallback / odds client
+pandas>=2.0.0
+requests>=2.31.0
+
+# .env file support for the Odds API key
+python-dotenv>=1.0.0

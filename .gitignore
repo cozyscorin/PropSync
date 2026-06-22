@@ -1,0 +1,30 @@
+# Secrets — never commit API keys
+.env
+*.env
+!*.env.example
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Pulled data dumps (regenerable, don't bloat the repo) — matches at any
+# depth, so this catches data_pipeline/data/raw/ without needing to spell
+# out the bracketed folder name (gitignore treats [ ] as glob syntax, not
+# literal characters, so the literal "[C]" folder name is deliberately
+# not written out here).
+data/raw/*.csv
+data/raw/*.json
+!data/raw/.gitkeep
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

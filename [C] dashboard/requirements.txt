@@ -1,0 +1,23 @@
+# PropSync dashboard dependencies.
+#
+# data_loader.py now has a real live path (see edge_ranking/live_integration.py)
+# that imports data_pipeline's statcast/park_factors/odds modules at call
+# time, gated behind ODDS_API_KEY being present. That live path is only
+# ever invoked if a key exists; sample_data.py's pure pandas path needs
+# none of this. But since the live path is real code now, not just a
+# documented plan, data_pipeline's own requirements need to be installed
+# too if you want the live path to actually have a chance of running
+# (pybaseball, requests, beautifulsoup4, python-dotenv) — see
+# ../[C] data_pipeline/requirements.txt for the exact versions.
+
+streamlit>=1.30
+pandas>=2.0
+
+# Needed only for the live data path (data_loader._load_raw_stats_live /
+# _load_ranked_edges_live) — see ../[C] data_pipeline/requirements.txt,
+# duplicated here so `pip install -r requirements.txt` in this folder is
+# enough to try the live path without also installing from that folder.
+pybaseball>=2.2.7
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+python-dotenv>=1.0.0

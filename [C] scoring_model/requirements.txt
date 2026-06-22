@@ -1,0 +1,12 @@
+# This layer has ZERO required third-party dependencies — Poisson CDF,
+# log5 blending, and shrinkage are all implemented against the Python
+# stdlib (math) in probability_utils.py, specifically so this layer can
+# be developed/tested without needing pip/network access (matches the
+# constraint the data_pipeline was built under too).
+#
+# Nothing below is required to run scoring_model/ or its tests. Listed
+# only as an optional cross-check tool if you want to verify the hand-
+# rolled Poisson math against scipy.stats.poisson in a notebook.
+
+# Optional, NOT imported by any module in this package:
+# scipy>=1.10.0
