@@ -1,0 +1,7 @@
+streamlit>=1.30
+pandas>=2.0
+pybaseball>=2.2.7
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+python-dotenv>=1.0.0
+lxml>=4.2.1
