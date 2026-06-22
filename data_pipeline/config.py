@@ -38,7 +38,6 @@ PLAYER_PROP_MARKETS = [
     "batter_home_runs",
     "batter_hits",
     "batter_total_bases",
-    "batter_rbis",
     "batter_singles",
     "batter_doubles",
     "pitcher_strikeouts",
