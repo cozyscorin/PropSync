@@ -12,7 +12,7 @@ import pandas as pd
 import streamlit as st
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
-for _folder in ("[C] scoring_model", "[C] edge_ranking", "[C] data_pipeline"):
+for _folder in ("scoring_model", "edge_ranking", "data_pipeline"):
     _p = _PROJECT_ROOT / _folder
     if str(_p) not in sys.path:
         sys.path.insert(0, str(_p))
