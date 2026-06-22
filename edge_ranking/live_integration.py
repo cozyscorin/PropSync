@@ -60,8 +60,8 @@ import pandas as pd
 
 # --- sys.path bootstrap, mirroring market_map.py's existing convention ---
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
-_SCORING_MODEL_DIR = _PROJECT_ROOT / "[C] scoring_model"
-_DATA_PIPELINE_DIR = _PROJECT_ROOT / "[C] data_pipeline"
+_SCORING_MODEL_DIR = _PROJECT_ROOT / "scoring_model"
+_DATA_PIPELINE_DIR = _PROJECT_ROOT / "data_pipeline"
 for _p in (_SCORING_MODEL_DIR, _DATA_PIPELINE_DIR):
     if str(_p) not in sys.path:
         sys.path.insert(0, str(_p))
